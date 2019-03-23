@@ -1,4 +1,4 @@
-from equation import Polynomial, Quadratic
+from task_5.equation import Polynomial, Quadratic
 def testPolynomialBasics():
     # we'll use a very simple str format...
     assert(str(Polynomial([1,2,3])) == "Polynomial(coeffs=[1, 2, 3])")
