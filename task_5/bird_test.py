@@ -1,4 +1,4 @@
-from task_5.bird import Bird, Penguin, MessengerBird
+from bird import Bird, Penguin, MessengerBird
 def getLocalMethods(clss):
     import types
     # This is a helper function for the test function below.

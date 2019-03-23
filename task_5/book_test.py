@@ -1,4 +1,4 @@
-from task_5.book import Book
+from book import Book
 
 def testBookClass():
     print("Testing Book class...", end="")

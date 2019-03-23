@@ -1,3 +1,4 @@
+from equation import Polynomial, Quadratic
 def testPolynomialBasics():
     # we'll use a very simple str format...
     assert(str(Polynomial([1,2,3])) == "Polynomial(coeffs=[1, 2, 3])")
@@ -160,3 +161,6 @@ def testQuadraticClass():
 def testEquationClasses():
     testPolynomialClass()
     testQuadraticClass()
+
+if __name__ == "__main__":
+    testEquationClasses()
