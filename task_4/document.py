@@ -45,6 +45,12 @@ class Document:
         """
         A method which inserts character to the document in
         current position of cursor.
+
+        Preconditions: if add several symbols <AssertionError> raises
+                       if cursor is outside of the document insertion
+                       makes on the beginning or end of the document.
+                       (if behind start - in the beginning, if out of
+                       end - in the end)
         :param character: str
         :return: None
         """
@@ -56,6 +62,9 @@ class Document:
     def delete(self):
         """
         A method which delete current char in document.
+
+        Precondition: If delete element which does not exist
+                      <IndexError> raises
         :return: None
         """
         del self.characters[self.cursor.position]
@@ -63,6 +72,9 @@ class Document:
     def save(self):
         """
         A method saves the document.
+
+        Precondition: if filename is not defined
+                      <FileNotFoundError> raises.
         :return: None
         """
         with open(self.filename, 'w') as f:
